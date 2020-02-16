@@ -1,0 +1,119 @@
+.container {
+    font-size: 1.3em;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "sidebar" "content" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1950px 100px;
+}
+
+
+/* exclusivo para el grid de la imágenes */
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 40px 20px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px 0;
+}
+
+.grid .card {
+    background: #FEFEFE;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    position: relative;
+    min-height: 195px;
+    margin-top: 50px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+
+.grid .card img {
+    vertical-align: top;
+    border-radius: 7px;
+    position: absolute;
+    top: -50px;
+    width: calc(100% - 40px);
+    max-height: 165px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.grid .card .botones {
+    width: 100%;
+    margin-top: 20px;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 20px;
+    /* -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr;
+}
+
+.grid .card .botones .boton {
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    display: block;
+    background: #111111;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+
+.grid .card .botones .boton.primario {
+    background: #3E60E9;
+}
+
+.grid .card .botones .boton.primario:hover {
+    background: #254BE6;
+}
+
+
+/* .grid .card .botones .boton.secundario {
+    background: #C8C8C8;
+}
+
+.grid .card .botones .boton.secundario:hover {
+    background: #ACABAB;
+} */
+
+@media (min-width:1040px) {
+    .container {
+        grid-template-areas: "sidebar content" "sidebar footer";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 1fr auto;
+    }
+}
+
+@media (max-width:650px) {
+    .grid {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 40px 20px;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 0;
+    }
+    .container {
+        font-size: 1.3em;
+        width: 100%;
+        min-height: 100vh;
+        display: grid;
+        grid-template-areas: "sidebar" "content" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 2600px 100px;
+    }
+}

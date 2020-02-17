@@ -10,6 +10,13 @@
     <!--Obs: el icono siempre antes del title si no habra error porsiaca-->
 
     <title>Juan Falcón</title>
+    <!-- para el seo -->
+    <meta name="description" content="Portafolio de Juan Diego Falcón Córdova desarrollador web front end y back end" />
+    <meta name="author" content="Juan Falcón" />
+    <meta name="keywords" content="front end developer, fullstack,Juan Falcón,back end developer,web developer,portafolio,desarrollador angular" />
+    <meta name="copyright" content="Juan Falcón" />
+    <meta name="robots" content="index,follow" />
+
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./styles/main.css">
@@ -38,10 +45,10 @@
                 <span><i class="fas fa-sun"></i></span>
                 <span><i class="fas fa-moon"></i></span>
             </button>
-            <section class="hero">
-                <img src="./assets/img/face_profile.jpg" alt="Imagen profile">
+            <section class="hero" itemscope itemtype="http://schema.org/Person">
+                <img itemprop="image" src="./assets/img/face_profile.jpg" alt="Imagen profile">
                 <div class="hero-content">
-                    <h1>Juan Falcón<br>Web Developer</h1>
+                    <h1 itemprop="name">Juan Falcón<br><span itemprop="jobTitle">Web Developer</span></h1>
                     <!-- <h2><span class="typed"></span></h2> -->
                     <h2><span class="typed"></span></h2>
                     <div id="id_cadenas_texto">
@@ -50,9 +57,9 @@
                         <p>Nodejs</p>
                         <p>Sql</p>
                     </div>
-                    <p>Me considero una persona analítica,creativa,perseverante, investigadora y apasionada por el mundo de las tecnologías Web , en el cual en los años de mi formación académica me llevo a afrontar diversos retos, esto hicieron de mi mejorar
+                    <p itemprop="description">Me considero una persona analítica,creativa,perseverante, investigadora y apasionada por el mundo de las tecnologías Web , en el cual en los años de mi formación académica me llevo a afrontar diversos retos, esto hicieron de mi mejorar
                         cada vez mas como programador tanto en el lado front-end como back-end con las diversas tecnologías mas demandadas. </p>
-                    <a class="action-btn" href="#">Ver más</a>
+                    <a class="action-btn" href="./pages/skills.html">Ver más</a>
                 </div>
             </section>
         </div>
